@@ -263,10 +263,10 @@ void BrowserWindow::updateLocationBar() {
 void BrowserWindow::updateWindowTitle() {
     BrowserTab *tab = currentTab();
     if (!tab) {
-        setWindowTitle("Qt URL Browser");
+        setWindowTitle("Kite Browser");
         return;
     }
 
     const QString title = tab->webView()->title();
-    setWindowTitle(title.isEmpty() ? "Qt URL Browser" : title + " - Qt URL Browser");
+    setWindowTitle(title.isEmpty() ? "Kite Browser" : title + " - Kite Browser");
 }
