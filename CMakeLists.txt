@@ -10,7 +10,14 @@ find_package(Qt6 6.2 REQUIRED COMPONENTS Widgets WebEngineWidgets)
 qt_standard_project_setup()
 
 qt_add_executable(qt_url_browser
-    main.cpp
+    src/main.cpp
+    src/browser/browser_tab.cpp
+    src/browser/browser_window.cpp
+)
+
+target_include_directories(qt_url_browser
+    PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/src
 )
 
 target_link_libraries(qt_url_browser
@@ -18,4 +25,3 @@ target_link_libraries(qt_url_browser
         Qt6::Widgets
         Qt6::WebEngineWidgets
 )
-
