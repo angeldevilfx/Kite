@@ -22,3 +22,7 @@ QWebEngineView *BrowserTab::webView() const {
 void BrowserTab::load(const QUrl &url) {
     m_webView->load(url);
 }
+
+void BrowserTab::loadHtml(const QString &html, const QUrl &baseUrl) {
+    m_webView->setHtml(html, baseUrl);
+}

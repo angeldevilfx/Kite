@@ -1,3 +1,4 @@
+#include "browser/app_settings.h"
 #include "browser/browser_window.h"
 
 #include <QApplication>
@@ -8,6 +9,7 @@ int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
     app.setApplicationName("Kite Browser");
     app.setOrganizationName("Kite");
+    applyBrowserTheme(app, loadBrowserSettings().themeMode);
 
     BrowserWindow window;
     window.show();

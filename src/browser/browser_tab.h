@@ -1,5 +1,6 @@
 #pragma once
 
+#include <QString>
 #include <QUrl>
 #include <QWidget>
 
@@ -13,6 +14,7 @@ public:
 
     QWebEngineView *webView() const;
     void load(const QUrl &url);
+    void loadHtml(const QString &html, const QUrl &baseUrl = QUrl());
 
 signals:
     void titleChanged(const QString &title);
